@@ -2,16 +2,16 @@
 app_name: strom
 
 # First and last name of the user
-user: YOUR NAME
+user: Joe Emmings (British Geological Survey)
 
 # The NLP product to run the application against
 product: NLP352
 
 # How often the application should be run
-frequency: monthly
+frequency: n/a
 
 # A list of terms used to subset the corpus
-terms: [stromatolite, stromatolitic, thrombolite, thrombolitic]
+terms: [pyrite nodule, pyrite nodules, pyrite concretion, pyrite concretions, pyritic nodule, pyritic nodules, pyritic concretion, pyritic concretions, nodular pyrite, nodules of pyrite, concretionary pyrite, concretions of pyrite, pyrite framboid, pyrite framboids, framboidal pyrite, organic sulphur, organic sulfur, sulphurized, sulfurized, lenticular mudstone, lenticular mudstones, lenticular mud, lenticular muds, microbial mat, microbial mats, chemosynthetic mat, chemosynthetic mats, benthic mat, benthic mats, stromatolite, stromatolitic, thrombolite, thrombolitic]
 
 # Stored dictionary of terms, to be set by GDD infrastructure admins
-dictionary: strom
+dictionary: ???
