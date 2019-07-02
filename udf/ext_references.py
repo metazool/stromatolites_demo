@@ -9,19 +9,22 @@ import time, psycopg2, yaml
 import numpy as np
 
 from psycopg2.extensions import AsIs
+from yaml import Loader
+from yaml import Loader
 
 #tic
 start_time = time.time()
 
 #Credentials and configuration
 with open('./credentials', 'r') as credential_yaml:
-    credentials = yaml.load(credential_yaml)
+    credentials = yaml.load(credential_yaml, Loader=Loader)
 
 with open('./config', 'r') as config_yaml:
-    config = yaml.load(config_yaml)
+    config = yaml.load(config_yaml, Loader=Loader)
 
 # Connect to Postgres
 connection = psycopg2.connect(
+    password=credentials['postgres']['password'],
     dbname=credentials['postgres']['database'],
     user=credentials['postgres']['user'],
     host=credentials['postgres']['host'],

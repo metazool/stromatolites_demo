@@ -10,4 +10,8 @@ services:
         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD-stromatolites}
       volumes:
         - /data/postgres:/var/lib/postgresql/data
+        - /var/run/postgresql:/var/run/postgresql
+        - $PWD/input/:/input/
+      ports:
+        - 5432:5432
 
