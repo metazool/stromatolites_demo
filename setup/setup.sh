@@ -22,7 +22,7 @@ eval $(parse_yaml config)
 pwd=$(pwd)
 
 # Create the database - if it exists an error will be thrown which can be ignored
-createdb $postgres__database -h $postgres__host -U $postgres__user -p $postgres__port
+createdb -h $postgres__host -U $postgres__user -p $postgres__port $postgres__database
 
 # Vanilla NLP
 echo "DROP TABLE IF EXISTS ${app_name}_sentences_nlp; CREATE TABLE ${app_name}_sentences_nlp (docid text, sentid integer, wordidx integer[], words text[], poses text[], ners text[], lemmas text[], dep_paths text[], dep_parents integer[], font text[], layout text[]);" | psql -U $postgres__user -h $postgres__host -p $postgres__port $postgres__database
