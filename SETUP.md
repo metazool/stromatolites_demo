@@ -31,7 +31,7 @@ Is 2.7 specific. Create a virtualenv and install dependencies
 
 Postgres installer - https://www.postgresql.org/download/windows/
 
-Git bash https://gitforwindows.org/
+Add `C:\Program Files\PostgreSQL\11\bin` in PATH (Search for Edit environment variables)
 
 ## Python
 
@@ -48,17 +48,14 @@ pip install -r .\requirements.txt
 
 ```
 
-## Database setup
+Run database setup script
 
-Add `C:\Program Files\PostgreSQL\11\bin` in PATH (Search for Edit environment variables)
+* `python setup\setup.py`
 
-Or add it in git bash; `export PATH="$PATH:/c/Program Files/PostgreSQL/bin"`
+Run application demo
 
-* `bash setup/setup.sh` to create the database and associated tables 
+* `python run.py`
 
-(this is what make local_setup does internally)
-
-At this stage it stalls. TBC :/
 
 
 
