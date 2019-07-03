@@ -8,7 +8,6 @@
 import time, random, psycopg2, yaml
 from psycopg2.extensions import AsIs
 from yaml import Loader
-from yaml import Loader
 
 #tic
 start_time = time.time()

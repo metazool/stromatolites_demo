@@ -5,7 +5,6 @@
 import time, random, re, yaml, psycopg2, copy, csv
 from psycopg2.extensions import AsIs
 from yaml import Loader
-from yaml import Loader
 
 start_time = time.time()
 

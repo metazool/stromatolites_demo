@@ -10,7 +10,6 @@ import numpy as np
 
 from psycopg2.extensions import AsIs
 from yaml import Loader
-from yaml import Loader
 
 #tic
 start_time = time.time()

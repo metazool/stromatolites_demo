@@ -14,7 +14,6 @@ import time, urllib2, csv, random, psycopg2, re, string, yaml
 from stop_words import get_stop_words
 from psycopg2.extensions import AsIs
 from yaml import Loader
-from yaml import Loader
 
 #tic
 start_time = time.time()

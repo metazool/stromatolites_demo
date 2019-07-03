@@ -7,7 +7,6 @@
 import time, urllib2, csv, random, psycopg2, re, yaml
 from psycopg2.extensions import AsIs
 from yaml import Loader
-from yaml import Loader
 
 #tic
 start_time = time.time()

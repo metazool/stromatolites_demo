@@ -7,7 +7,6 @@ import yaml
 import psycopg2
 from psycopg2.extensions import AsIs
 from yaml import Loader
-from yaml import Loader
 
 # Connect to Postgres
 with open('./credentials', 'r') as credential_yaml:
