@@ -4,4 +4,4 @@ all:
 
 
 local_setup:
-	./setup/setup.sh
+	bash ./setup/setup.sh

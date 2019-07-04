@@ -1,0 +1,17 @@
+# Postgres as a data store
+#
+version: "3.1"
+services:
+
+    postgres:
+      image: mdillon/postgis:10
+      restart: unless-stopped
+      environment:
+        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD-stromatolites}
+      volumes:
+        - /data/postgres:/var/lib/postgresql/data
+        - /var/run/postgresql:/var/run/postgresql
+        - $PWD/input/:/input/
+      ports:
+        - 5432:5432
+

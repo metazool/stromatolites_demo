@@ -3,16 +3,18 @@
 #==============================================================================
 
 import json,psycopg2, yaml
+from yaml import Loader
 
 # Connect to Postgres
 with open('./credentials', 'r') as credential_yaml:
-    credentials = yaml.load(credential_yaml)
+    credentials = yaml.load(credential_yaml, Loader=Loader)
 
 with open('./config', 'r') as config_yaml:
-    config = yaml.load(config_yaml)
+    config = yaml.load(config_yaml, Loader=Loader)
 
 # Connect to Postgres
 connection = psycopg2.connect(
+    password=credentials['postgres']['password'],
     dbname=credentials['postgres']['database'],
     user=credentials['postgres']['user'],
     host=credentials['postgres']['host'],

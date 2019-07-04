@@ -3,21 +3,22 @@
 #==============================================================================
 
 import os, time, subprocess, yaml
+from yaml import Loader
 
 #tic
 start_time = time.time()
 
 #load configuration file
 with open('./config', 'r') as config_yaml:
-    config = yaml.load(config_yaml)
+    config = yaml.load(config_yaml, Loader=Loader)
 
 #load credentials file
 with open('./credentials', 'r') as credential_yaml:
-    credentials = yaml.load(credential_yaml)
+    credentials = yaml.load(credential_yaml, Loader=Loader)
 
 #INITALIZE THE POSTGRES TABLES
 print 'Step 1: Initialize the PSQL tables ...'
-subprocess.call('./setup/setup.sh', shell=True)
+#subprocess.call('bash ./setup/setup.sh', shell=True)
 os.system('python ./udf/initdb.py')
 
 #BUILD THE BIBLIOGRAPHY
